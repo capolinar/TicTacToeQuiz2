@@ -15,6 +15,18 @@ int main(){
     printf("You have entered choice %d", i); 
     printf("\n\nYour Current status is: \n\n");
 
+    //game if i = 1(person vs. person)
+    if(i == 1)
+    {
+//add game
+    }
+
+    //game if i = 2(random computer)
+    if(i == 2)
+    {
+
+    }
+
 
 
     //asdfasdf
