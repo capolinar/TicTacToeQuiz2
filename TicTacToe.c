@@ -8,14 +8,14 @@ int main(){
     printf("1---person vs person \n \n");
     printf("2---person vs. random computer \n \n");
     printf("Enter your choice(1 or 2): \n");
-    //code ask for choice
-    printf("=============================\n\n");
-    printf("You have entered choice ");
-    //print the choice made
-
-    
-
     //read information from console
+    int i;
+    scanf("%d", &i);
+    printf("=============================\n\n");
+    printf("You have entered choice %d", i); 
+    printf("\n\nYour Current status is: \n\n");
+
+
 
     //asdfasdf
 
