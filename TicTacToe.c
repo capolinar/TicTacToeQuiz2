@@ -136,9 +136,14 @@ int main(){
 
             }
             w = win();
-            if(w != -1) //this updates win status, breaks loop if game is over
+            if(w == 1) //this updates win status, breaks loop if game is over
             {
                 printf("\nPlayer 1 has won!!!\n\n");
+                break;
+            }
+            else if(w == 0)
+            {
+                printf("\nIt is a tie, no winners.\n\n");
                 break;
             }
             //////Player 2's turn(Person)
@@ -170,9 +175,14 @@ int main(){
 
             }
             w = win();
-            if(w != -1) //this updates win status, breaks loop if game is over
+            if(w == 1) //this updates win status, breaks loop if game is over
             {
                 printf("\nPlayer 2 has won!!!\n\n"); //win message for player 2
+                break;
+            }
+            else if(w == 0)
+            {
+                printf("\nIt is a tie, no winners.\n\n");
                 break;
             }
 
@@ -219,9 +229,14 @@ int main(){
 
             }
             w = win();
-            if(w != -1) //this updates win status, breaks loop if game is over
+            if(w == 1) //this updates win status, breaks loop if game is over
             {
                 printf("\nPlayer 1 has won!!!\n\n");
+                break;
+            }
+            else if(w == 0)
+            {
+                printf("\nIt is a tie, no winners.\n\n");
                 break;
             }
 
@@ -255,9 +270,14 @@ int main(){
 
             }
             w = win();
-            if(w != -1) //this updates win status, breaks loop if game is over
+            if(w == 1) //this updates win status, breaks loop if game is over
             {
                 printf("\nPlayer 2(Computer) has won!!!\n\n"); //winner message for computer
+                break;
+            }
+            else if(w == 0)
+            {
+                printf("\nIt is a tie, no winners.\n\n");
                 break;
             }
             
