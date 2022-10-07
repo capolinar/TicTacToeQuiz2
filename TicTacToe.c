@@ -100,6 +100,7 @@ int main(){
 
     time_t t;
     srand((unsigned)  time(&t)); //time for real random numbers
+    int w = win();//w is win status
 
     //game if i = 1(person vs. person)
     if(i == 1)
@@ -108,9 +109,10 @@ int main(){
     }
 
     //game if i = 2(random computer)
+
     if(i == 2)
     {
-        int w = -1;
+        
         printf("Test message, w should be -1 actual: %d\n",w);
         while(w == -1)//keeps loop while game is in progress
         {
@@ -137,7 +139,7 @@ int main(){
                  }
                  else
                  {
-                    printf("Number is not between 1 and 9, please enter again");
+                    printf("Number is not between 1 and 9, please enter again\n");
                  }
             
 
@@ -147,11 +149,15 @@ int main(){
            
 
             
-
+            w = win();
+            printf("Test message, w should be -1 to continue, actual: %d\n",w);
+            /*
+            printf("Test message, w should be -1 to continue, actual: %d\n",w);
             printf("Test message, to exit loop enter 0 \n\n");
             int exit;
             scanf("%d", &exit);
             w = exit;
+            */
         }
 
     }
