@@ -15,10 +15,19 @@ int main(){
     printf("You have entered choice %d", i); 
     printf("\n\nYour Current status is: \n\n");
 
+    printf("+-----------+\n");
+    printf("|   |   |   | \n");
+    printf("+-----------+\n");
+    printf("|   |   |   | \n");
+    printf("+-----------+\n");
+    printf("|   |   |   | \n");
+    printf("+-----------+\n\n");
+    printf("Player1: make your move\n");
+
     //game if i = 1(person vs. person)
     if(i == 1)
     {
-//add game
+    //add game
     }
 
     //game if i = 2(random computer)
