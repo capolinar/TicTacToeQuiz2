@@ -3,7 +3,7 @@
 #include  <stdlib.h> 
 #include  <time.h>
 
-char square[10] = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' }; //the tictactoe board
+char square[10] = { '0', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' }; //the tictactoe board
 //function to print board, used after every move made my a player
 void printBoard()
 {
@@ -36,7 +36,7 @@ int main(){
     printf("\n\nYour Current status is: \n\n");
 
     
-
+/*
     printf("+-----------+\n");
     printf("|   |   |   | \n");
     printf("+-----------+\n");
@@ -44,6 +44,8 @@ int main(){
     printf("+-----------+\n");
     printf("|   |   |   | \n");
     printf("+-----------+\n\n");
+    */
+    printBoard();
     printf("Player1: make your move\n");
 
     time_t t;
