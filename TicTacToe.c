@@ -147,6 +147,7 @@ int main(){
             w = win();
             if(w != -1) //this updates win status, breaks loop if game is over
             {
+                printf("\nPlayer 1 has won!!!\n\n");
                 break;
             }
 
@@ -166,20 +167,23 @@ int main(){
                     }
                     else if(square[com] != ' ')
                     {
-                        printf("Space is already taken. \n");
+                        //printf("Space is already taken. \n");
+                        //computer does not need to know info
                        
                     }
 
                  }
                  else
                  {
-                    printf("Number is not between 1 and 9, please enter again\n");
+                    //printf("Number is not between 1 and 9, please enter again\n");
+                    //computer does not need to know info
                  }
 
             }
             w = win();
             if(w != -1) //this updates win status, breaks loop if game is over
             {
+                printf("\nPlayer 2(Computer) has won!!!\n\n"); //winner message for computer
                 break;
             }
             
