@@ -160,7 +160,7 @@ int main(){
                  {
                     if(square[com] == ' ')
                     {
-                        square[com] = 'X';
+                        square[com] = 'O';
                         printBoard();
                         valid = true;
                     }
@@ -192,9 +192,9 @@ int main(){
             
             printf("Test message, w should be -1 to continue, actual: %d\n",w);
             printf("Test message, to exit loop enter 0 \n\n");
-            int exit;
-            scanf("%d", &exit);
-            w = exit;
+           // int exit;
+            //scanf("%d", &exit);
+            //w = exit;
             
         }
 
