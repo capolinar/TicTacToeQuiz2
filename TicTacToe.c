@@ -105,7 +105,82 @@ int main(){
     //game if i = 1(person vs. person)
     if(i == 1)
     {
-    //add game
+         while(w == -1)//keeps loop while game is in progress
+        {
+            bool valid = false;
+            while(!valid)
+            {
+                printf("Player 1: make your move\n\n"); //player1 prompt
+                int choice;
+                scanf("%d", &choice);
+                 if(choice > 0 && choice < 10)
+                 {
+                    if(square[choice] == ' ')
+                    {
+                        square[choice] = 'X';
+                        printBoard();
+                        valid = true;
+                    }
+                    else if(square[choice] != ' ')
+                    {
+                        printf("Space is already taken. \n");
+                       
+                    }
+
+                 }
+                 else
+                 {
+                    printf("Number is not between 1 and 9, please enter again\n");
+                 }
+            
+
+            }
+            w = win();
+            if(w != -1) //this updates win status, breaks loop if game is over
+            {
+                printf("\nPlayer 1 has won!!!\n\n");
+                break;
+            }
+            //////Player 2's turn(Person)
+            valid = false;
+            while(!valid)
+            {
+                printf("Player 2: make your move\n\n"); //player1 prompt
+                int choice;
+                scanf("%d", &choice);
+                 if(choice > 0 && choice < 10)
+                 {
+                    if(square[choice] == ' ')
+                    {
+                        square[choice] = 'X';
+                        printBoard();
+                        valid = true;
+                    }
+                    else if(square[choice] != ' ')
+                    {
+                        printf("Space is already taken. \n");
+                       
+                    }
+
+                 }
+                 else
+                 {
+                    printf("Number is not between 1 and 9, please enter again\n");
+                 }
+
+            }
+            w = win();
+            if(w != -1) //this updates win status, breaks loop if game is over
+            {
+                printf("\nPlayer 2 has won!!!\n\n"); //win message for player 2
+                break;
+            }
+
+
+
+
+        }
+    
     }
 
     //game if i = 2(random computer)
