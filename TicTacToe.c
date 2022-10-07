@@ -51,7 +51,7 @@ int win() //function that returns 1 if game is over, -1 if in progress, and 0 if
         return 1;
         
     else if (square[1] != ' ' && square[2] != ' ' && square[3] != ' ' && //checks if any remaining spaces
-        square[4] != ' ' && square[5] != ' ' && square[6] != ' ' && square[ ] 
+        square[4] != ' ' && square[5] != ' ' && square[6] != ' ' && square[7] 
         != ' ' && square[8] != ' ' && square[9] != ' ')
 
         return 0; //if no remaining spaces, game is over(tie)
@@ -98,9 +98,15 @@ int main(){
     //game if i = 2(random computer)
     if(i == 2)
     {
-        int w = win();
-        while(w != 1 || w != 0)//keeps loop while game is in progress
+        int w = -1;
+        printf("Test message, w should be -1 actual: %d\n",w);
+        while(w == -1)//keeps loop while game is in progress
         {
+            printf("Test message, enter 0 to exit while loop\n");
+            int test;
+            scanf("%d", &test);
+            w = test;
+            printf("Test message, w should be -1  actual: %d\n",w);
 
         }
 
