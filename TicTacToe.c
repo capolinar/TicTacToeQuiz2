@@ -152,7 +152,7 @@ int main(){
                  {
                     if(square[choice] == ' ')
                     {
-                        square[choice] = 'X';
+                        square[choice] = 'O';
                         printBoard();
                         valid = true;
                     }
