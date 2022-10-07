@@ -144,20 +144,58 @@ int main(){
             
 
             }
+            w = win();
+            if(w != -1) //this updates win status, breaks loop if game is over
+            {
+                break;
+            }
+
+            //player 2(Computer)'s turn
+            valid = false;
+            int com;
+            while(!valid)
+            {
+                com = rand()  %  9 + 1; //random number between (0 and 8) + 1 
+                if(com > 0 && com < 10)
+                 {
+                    if(square[com] == ' ')
+                    {
+                        square[com] = 'X';
+                        printBoard();
+                        valid = true;
+                    }
+                    else if(square[com] != ' ')
+                    {
+                        printf("Space is already taken. \n");
+                       
+                    }
+
+                 }
+                 else
+                 {
+                    printf("Number is not between 1 and 9, please enter again\n");
+                 }
+
+            }
+            w = win();
+            if(w != -1) //this updates win status, breaks loop if game is over
+            {
+                break;
+            }
+            
+
 
         
            
 
             
-            w = win();
-            printf("Test message, w should be -1 to continue, actual: %d\n",w);
-            /*
+            
             printf("Test message, w should be -1 to continue, actual: %d\n",w);
             printf("Test message, to exit loop enter 0 \n\n");
             int exit;
             scanf("%d", &exit);
             w = exit;
-            */
+            
         }
 
     }
