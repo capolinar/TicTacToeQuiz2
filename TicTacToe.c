@@ -63,6 +63,16 @@ int win() //function that returns 1 if game is over, -1 if in progress, and 0 if
 int main(){
     //prompt user for game they wish to play
     printf("Welcome to Tic Tac Toe! \n"); 
+
+    printf("Make sure to enter a number between 1 and 9 that correspond to these spaces:\n\n");
+    printf("+-----------+\n");
+    printf("| 1 | 2 | 3 | \n");
+    printf("+-----------+\n");
+    printf("| 4 | 5 | 6 | \n");
+    printf("+-----------+\n");
+    printf("| 7 | 8 | 9 | \n");
+    printf("+-----------+\n\n");
+
     printf("1---person vs person \n \n");
     printf("2---person vs. random computer \n \n");
     printf("Enter your choice(1 or 2): \n");
@@ -74,7 +84,7 @@ int main(){
     printf("\n\nYour Current status is: \n\n");
 
     
-/*
+/*blank board
     printf("+-----------+\n");
     printf("|   |   |   | \n");
     printf("+-----------+\n");
@@ -83,8 +93,9 @@ int main(){
     printf("|   |   |   | \n");
     printf("+-----------+\n\n");
     */
+ 
     printBoard();
-    printf("Player1: make your move\n");
+
 
     time_t t;
     srand((unsigned)  time(&t)); //time for real random numbers
@@ -102,19 +113,27 @@ int main(){
         printf("Test message, w should be -1 actual: %d\n",w);
         while(w == -1)//keeps loop while game is in progress
         {
-            printf("Test message, enter 0 to exit while loop\n");
-            int test;
-            scanf("%d", &test);
-            w = test;
-            printf("Test message, w should be -1  actual: %d\n",w);
+            printf("Player 1: make your move\n\n");
+            int choice;
+            scanf("%d", &choice);
+            if(square[choice] == ' ')
+            {
+                square[choice] = 'X';
+                printBoard();
+            }
 
+            
+
+            printf("Test message, to exit loop enter 0 \n\n");
+            int exit;
+            scanf("%d", &exit);
+            w = exit;
         }
 
     }
 
 
 
-    //asdfasdf
 
 
 
