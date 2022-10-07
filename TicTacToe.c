@@ -98,6 +98,11 @@ int main(){
     //game if i = 2(random computer)
     if(i == 2)
     {
+        int w = win();
+        while(w != 1 || w != 0)//keeps loop while game is in progress
+        {
+
+        }
 
     }
 
