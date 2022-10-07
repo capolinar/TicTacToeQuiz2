@@ -113,7 +113,6 @@ int main(){
     if(i == 2)
     {
         
-        printf("Test message, w should be -1 actual: %d\n",w);
         while(w == -1)//keeps loop while game is in progress
         {
             bool valid = false;
@@ -193,12 +192,13 @@ int main(){
            
 
             
-            
+            /*//////////Testing statements, allows user to exit while loop if theres a bug
             printf("Test message, w should be -1 to continue, actual: %d\n",w);
             printf("Test message, to exit loop enter 0 \n\n");
            // int exit;
             //scanf("%d", &exit);
             //w = exit;
+            */
             
         }
 
