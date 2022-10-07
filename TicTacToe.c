@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include  <stdlib.h> 
 #include  <time.h>
+#include <stdbool.h>
 
 char square[10] = { '0', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' }; //the tictactoe board
 //function to print board, used after every move made my a player
@@ -113,20 +114,37 @@ int main(){
         printf("Test message, w should be -1 actual: %d\n",w);
         while(w == -1)//keeps loop while game is in progress
         {
-            printf("Player 1: make your move\n\n");
-            int choice;
-            scanf("%d", &choice);
-            if(square[choice] == ' ')
+            bool valid = false;
+            while(!valid)
             {
-                square[choice] = 'X';
-                printBoard();
-                w = win();
-            }
-            else if(square[choice] != ' ')
-            {
-                printf("Space is already taken, enter another number")
+                printf("Player 1: make your move\n\n"); //player1 prompt
+                int choice;
+                scanf("%d", &choice);
+                 if(choice > 0 && choice < 10)
+                 {
+                    if(square[choice] == ' ')
+                    {
+                        square[choice] = 'X';
+                        printBoard();
+                        valid = true;
+                    }
+                    else if(square[choice] != ' ')
+                    {
+                        printf("Space is already taken. \n");
+                       
+                    }
+
+                 }
+                 else
+                 {
+                    printf("Number is not between 1 and 9, please enter again");
+                 }
+            
 
             }
+
+        
+           
 
             
 
