@@ -3,6 +3,25 @@
 #include  <stdlib.h> 
 #include  <time.h>
 
+char square[10] = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' }; //the tictactoe board
+//function to print board, used after every move made my a player
+void printBoard()
+{
+    //system("cls");
+    printf("\n\n\tTic Tac Toe\n\n");
+
+    printf("Player 1 is X-----Player 2 is O \n\n\n");
+
+
+    printf("+-----------+\n");
+    printf("| %c | %c | %c |\n", square[1], square[2], square[3]);
+    printf("+-----------+\n");
+    printf("| %c | %c | %c |\n", square[4], square[5], square[6]);
+    printf("+-----------+\n");
+    printf("| %c | %c | %c |\n", square[7], square[8], square[9]);
+    printf("+-----------+\n");
+}
+
 int main(){
     //prompt user for game they wish to play
     printf("Welcome to Tic Tac Toe! \n"); 
@@ -15,6 +34,8 @@ int main(){
     printf("=============================\n\n");
     printf("You have entered choice %d", i); 
     printf("\n\nYour Current status is: \n\n");
+
+    
 
     printf("+-----------+\n");
     printf("|   |   |   | \n");
