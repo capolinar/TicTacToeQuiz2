@@ -25,6 +25,9 @@ int main(){
     printf("+-----------+\n\n");
     printf("Player1: make your move\n");
 
+    time_t t;
+    srand((unsigned)  time(&t)); //time for real random numbers
+
     //game if i = 1(person vs. person)
     if(i == 1)
     {
