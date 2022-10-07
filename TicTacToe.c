@@ -26,28 +26,28 @@ int win() //function that returns 1 if game is over, -1 if in progress, and 0 if
 {                                                             //each of these check if X or O are in a row
                                                         //essentially checks all combinations of win conditions
    
-    if (square[1] == square[2] && square[2] == square[3]) //top row
+    if (square[1] != ' ' && square[2] != ' ' && square[1] == square[2] && square[2] == square[3]) //top row
         return 1;
         
-    else if (square[4] == square[5] && square[5] == square[6])//middle row
+    else if (square[4] != ' ' && square[5] != ' ' &&  square[4] == square[5] && square[5] == square[6])//middle row
         return 1;
         
-    else if (square[7] == square[8] && square[8] == square[9])//bottom row
+    else if (square[7] != ' ' && square[8] != ' ' && square[7] == square[8] && square[8] == square[9])//bottom row
         return 1;
         
-    else if (square[1] == square[4] && square[4] == square[7])//left column
+    else if (square[1] != ' ' && square[4] != ' ' && square[1] == square[4] && square[4] == square[7])//left column
         return 1;
         
-    else if (square[2] == square[5] && square[5] == square[8])//middle column
+    else if (square[2] != ' ' && square[5] != ' ' && square[2] == square[5] && square[5] == square[8])//middle column
         return 1;
         
-    else if (square[3] == square[6] && square[6] == square[9])//bottom column
+    else if (square[3] != ' ' && square[6] != ' ' && square[3] == square[6] && square[6] == square[9])//bottom column
         return 1;
         
-    else if (square[1] == square[5] && square[5] == square[9])//left diaganol
+    else if (square[1] != ' ' && square[5] != ' ' && square[1] == square[5] && square[5] == square[9])//left diaganol
         return 1;
         
-    else if (square[3] == square[5] && square[5] == square[7])//right diagnol
+    else if (square[5] != ' ' && square[5] != ' ' && square[3] == square[5] && square[5] == square[7])//right diagnol
         return 1;
         
     else if (square[1] != ' ' && square[2] != ' ' && square[3] != ' ' && //checks if any remaining spaces
@@ -120,6 +120,12 @@ int main(){
             {
                 square[choice] = 'X';
                 printBoard();
+                w = win();
+            }
+            else if(square[choice] != ' ')
+            {
+                printf("Space is already taken, enter another number")
+
             }
 
             
